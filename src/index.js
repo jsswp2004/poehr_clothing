@@ -6,10 +6,11 @@ import './index.css';
 import App from './App';
 
 
+const rootElement = document.getElementById('root');
 ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById('root')
+  rootElement,
 );
 
