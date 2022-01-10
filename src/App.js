@@ -25,17 +25,19 @@ class App extends React.Component {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
+        userRef.onSnapshot((snapShot) => {
+          this.setState(
+            {
+              currentUser: {
+                id: snapShot.id,
+                ...snapShot.data(),
+              },
+            },
+            () => {
+              console.log(this.state);
             }
-          }, () => {
-            console.log(this.state);
-          });
+          );
         });
-        
       }
 
       this.setState({ currentUser: userAuth });
@@ -44,7 +46,7 @@ class App extends React.Component {
 
   componentWillUnmount() {
     this.unsubscribeFromAuth();
-      }
+  }
 
   render() {
     return (
@@ -61,4 +63,3 @@ class App extends React.Component {
 }
 
 export default App;
-
