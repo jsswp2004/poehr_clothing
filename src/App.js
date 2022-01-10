@@ -61,6 +61,4 @@ class App extends React.Component {
 }
 
 export default App;
-//<Route path="/hats" component={HatsPage}/>
-//<Route exact path="/" component={HomePage} />
-//<HomePage />
+
