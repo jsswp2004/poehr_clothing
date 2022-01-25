@@ -22,7 +22,7 @@ const CartDropdown = ({ cartItems, history }) => {
         <span className="empty-message">Your cart is empty</span>
       )}
     </div>
-    <CustomButton onClick={() => navigate('../../pages/checkout')}>
+    <CustomButton onClick={() => navigate('/CheckoutPage')}>
       GO TO CHECKOUT
     </CustomButton>
   </div>;
