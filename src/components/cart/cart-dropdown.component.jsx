@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { Navigate } from "react-router-dom";
+//import { useNavigate,Navigate } from "react-router-dom";
 import CustomButton from "../custom-button/custom-button.component";
 import CartItem from "../cart-item/cart-item.component";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
@@ -34,4 +34,5 @@ const mapStateToProps = createStructuredSelector({
 
 export default connect(mapStateToProps)(CartDropdown);
 //navigate('/CheckoutPage')}>
+//onClick={() => <Navigate to="/CheckoutPage" />}
 //onClick={() => <Navigate to="/CheckoutPage" />}
