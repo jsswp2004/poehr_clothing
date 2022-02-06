@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import CategoryPage from "../category/category.component";
+import CollectionPage from "../collection/collection.component";
 //import { connect } from 'react-redux';
 //import { createStructuredSelector } from "reselect";
 
@@ -25,7 +25,7 @@ const ShopPage = () => {
     <div className="shop-page">
       <Routes>
         <Route path="/" element={<CollectionsOverview />} />
-        <Route path=":categoryId" element={<CategoryPage />} />
+        <Route path=":collectionId" element={<CollectionPage />} />
       </Routes>
     </div>
   );
